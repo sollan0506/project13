@@ -1,0 +1,669 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ********************** 레이아웃 구성시작 *********************** */
+#wrap { width: 100%; height: 100%; margin: auto;}
+
+header { height: 63px; }
+footer { height: 147px; }
+.container { width: 1170px; height: 100%; margin: auto; }
+
+
+/* ********************** 공통영역 선언시작 *********************** */
+/* ********* header Area Start *********** */
+header { 
+  background-color: #fff; 
+  position: relative;
+  z-index: 30;
+  overflow: hidden;
+}
+header h1 a img { 
+  position: absolute; top: 0; left: 0;
+  width: 85px;
+  margin: 10px 0 0 40px;
+  z-index: 20;
+}
+
+/* gnb */
+header nav{ 
+  width: 100%; height: 243px; 
+  position: absolute; left: 0; top: 0;
+  background-color: #fff;
+  box-shadow: 0px 1px 30px 1px #333;
+}
+header nav::after{ 
+  content: ''; display: block;
+  width: 100%; height: 1px;
+  background-color: #ccc;
+  position: absolute; left: 0; top: 62px;
+}
+/* 주메뉴 설정 시작 */
+header nav>ul { 
+  width: 950px; height: 63px;
+  text-align: center;
+  padding-top: 22px;
+
+  position: absolute; left: 50%; top: 0;
+  
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+header nav>ul>li { 
+  display: inline-block; 
+  width: 230px;
+  height: auto;
+  position: relative;
+}
+header nav>ul>li>a {
+  font: 700 1.1em/21px 'Nanum Gothic', sans-serif;
+}
+header nav>ul>li>a:hover {
+  color: red;
+}
+header nav>ul>li>a:hover::after { 
+  content: ''; display: block;
+  width: 60px; height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 85px; bottom: -20px;
+}
+/* 현재위치 활성화 클래스 */
+.location_sub, .location_main {
+  color: red;
+}
+.location_main::after {
+  content: ''; display: block;
+  width: 60px; height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 85px; bottom: -20px;
+}
+
+/* 서브메뉴 설정 시작 */
+header nav ul ul{
+  width: 100%; height: 180px; padding: 10px 0;
+  position: absolute; left: 0; top: 40px;  
+  border-left: 1px solid #ccc;
+}
+header nav>ul>li:last-child>ul{
+  border-right: 1px solid #ccc;
+}
+header nav li li{
+  width: 100%; height: 35px;
+}
+header nav li li a{
+  display: block; width: 100%; height: 100%;
+  font: 15px/35px "맑은 고딕", sans-serif;  
+}
+header nav li li a:hover{
+  color: red;
+}
+
+/* q-menu */
+header .q-menu { 
+  position: absolute; top: 0; right: 0;
+}
+header .q-menu .lang { 
+  float: left; 
+  margin: 21px 20px 0 20px;
+}
+header .q-menu .lang>div { 
+  float: left; 
+  margin-right: 10px; 
+  position: relative;
+}
+header .q-menu .lang>div:first-child::after {
+  content: ''; display: block;
+  width: 24px; height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: -1px; bottom: -3px;
+}
+header .q-menu .lang a {
+  font: 400 1.4em 'Nanum Gothic', sans-serif;
+}
+header .q-menu .q-info {float: right;}
+header .q-menu .q-info>div { 
+  float: left; 
+  padding: 23px 10px;
+}
+header .q-menu .q-info>div:first-child {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+} 
+header .q-menu .q-info a {
+  font: 400 1.4em 'Nanum Gothic', sans-serif;
+}
+
+
+
+/* ************** location-bar Area Start *************** */
+.location-bar {
+  height: 42px;
+  /* border-top: 1px solid #ccc; */
+  border-bottom: 1px solid #ccc;
+}
+.location-bar li {
+  float: left;
+  margin: 10px;
+  font: 400 1em 'Nanum Gothic', sans-serif;
+  color: #9c9c9c;
+}
+.location-bar li:last-child {
+  color: #000;
+}
+
+
+/* ************** footer Area Start *************** */
+footer {
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+footer .black_logo {
+  width: 130px;
+  height: 60px;
+  position: absolute;
+  top: 42px;
+  left: 50px;
+}
+footer #footer-top {
+  position: absolute; left: 50%; top: 42px;
+  
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+footer #footer-top ul li{
+  float: left;
+  margin: 0 30px;
+  position: relative;
+}
+footer #footer-top ul li::after{
+  content: ''; display: block;
+  width: 1px; height: 10px;
+  background-color: #666;
+  position: absolute;
+  bottom: 3px; right: -30px;
+}
+footer #footer-top ul li:first-child a{
+  color: red;
+}
+footer #footer-top ul li:last-child::after{
+  display: none;
+}
+footer #footer-top ul li a{
+  font: 400 1em 'Nanum Gothic', sans-serif;
+}
+footer #footer-bottom {
+  position: absolute; left: 50%; top: 84px;
+  
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+footer #footer-bottom address {
+  font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
+  font-style: normal;
+  text-align: center;
+  color: #aaa;
+}
+footer .sk_mservice_logo {
+  position: absolute;
+  top: 42px;
+  right: 100px;
+}
+footer .tacademy_logo {
+  position: absolute;
+  top: 42px;
+  right: 250px;
+}
+
+
+
+/* ********************** 개별영역 선언시작 *********************** */
+/* ************ sub1 page area start *********** */
+#sub1 h2.page-title p{
+  width: 400px; height: 63px;
+  font: 400 3.5em 'Nanum Gothic', sans-serif;
+  margin: 42px 0;
+}
+
+/* msg-summary */
+#sub1 .msg-summary .msg-summary-box {
+  width: 1170px; height: 483px;
+  background-color: #f9faf9;
+  margin-bottom: 84px;
+}
+#sub1 .msg-summary img {
+  margin-top: 42px;
+  float: left;
+}
+#sub1 .msg-summary .text-box {
+  padding: 105px 90px 0 30px;
+}
+#sub1 .msg-summary .text-box p:first-child{
+  font: 400 3em 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+  position: relative;
+}
+#sub1 .msg-summary .text-box p:first-child::before{
+  content: ''; display: block;
+  position: absolute;
+  top: -30px; left: 450px;
+  width: 66px; height: 56px;
+  background: url(../images/bg_dot_left.png) no-repeat 0 0;
+}
+#sub1 .msg-summary .text-box p:nth-child(2){
+  font: 700 2.6em 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+  color: #f58027;
+  position: relative;
+}
+#sub1 .msg-summary .text-box p:nth-child(2)::after{
+  content: ''; display: block;
+  position: absolute;
+  top: 10px; right: -10px;
+  width: 66px; height: 56px;
+  background: url(../images/bg_dot_right.png) no-repeat 0 0;
+}
+#sub1 .msg-summary .text-box p:last-child{
+  font: 400 1.8em/1.5 'Nanum Gothic', sans-serif;
+}
+
+/* msg-main  */
+#sub1 .msg-main .msg-main-box{
+  width: 1170px; height: 462px;
+}
+#sub1 .msg-main .msg-main-text{
+  text-align: center;
+  margin-bottom: 42px;
+}
+#sub1 .msg-main .msg-main-text strong{
+  font: 700 1.5em 'Nanum Gothic', sans-serif;
+}
+#sub1 .msg-main .msg-main-text p{
+  font: 400 1.5em 'Nanum Gothic', sans-serif;
+  color: #8c8c8c;
+  margin-top: 5px;
+}
+
+/* sign-box */
+#sub1 .sign-box{
+  position: relative;
+  height: 63px;
+}
+#sub1 .sign-box .sign-box-inner{
+  width: 400px; height: 63px;
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -200px; margin-top: -31.5px;
+}
+#sub1 .sign-box .sign-text {
+  width: 200px; height: 63px;
+  font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+  padding: 21px 30px;
+  float: left;
+}
+
+
+
+/* ************ sub2 page area start *********** */
+#sub2 .page-title h2 {
+  font: 400 5em 'Nanum Gothic', sans-serif;
+  margin: 42px 0 10px 0;
+}
+#sub2 .page-title p {
+  font: 400 1.4em 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+
+/* business_visual */
+#sub2 .business-visual-box {
+  width: 1170px; height: 400px;
+  position: relative;
+  margin-bottom: 84px;
+}
+#sub2 .business-visual-box>img{
+  width: 100%; height: 100%;
+}
+
+/* items-bottom-box */
+#sub2 .items-bottom-box ul {
+  position: absolute;
+  left: 0; bottom: 0;
+  text-align: center;
+}
+#sub2 .items-bottom-box ul li {
+  width: 292px; height: 63px;
+  border-right: 1px solid #555555;
+  background-color: rgba(255, 255, 255, 0.5);
+  float: left;
+}
+#sub2 .items-bottom-box ul li:last-child {
+  width: 294px;
+  border: 0;
+}
+#sub2 .items-bottom-box li h3 {
+  display: inline-block;
+  font: 400 1.2em/63px 'Nanum Gothic', sans-serif;
+  margin-right: 5px;
+}
+
+/* hover-items-box */
+#sub2 .hover-items-box {
+  width: 100%; height: 100%;
+  position: absolute;
+  left: 0; top: 0;
+}
+#sub2 .hover-items-box>div {
+  width: 292px; height: 100%;
+  float: left;
+}
+#sub2 .hover-items-box>div:last-child {
+  width: 294px;
+}
+
+#sub2 .hover-items-box>div a {
+  display: block;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+#sub2 .hover-items-box>div a>div {
+  position: relative;
+  bottom: -400px;
+  width: 100%; height: 100%;
+  text-align: center;
+  padding-top: 126px;
+  background-color: rgba(200, 37, 61, 0.9);
+
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s; 
+}
+#sub2 .hover-items-box>div:first-child a>div{
+  bottom: 0;
+}
+/* #sub2 .hover-items-box>div a:hover>div {
+  bottom: 0;
+} */
+#sub2 .hover-items-box>div a>div h3{
+  color: #fff;
+  font: 400 2em 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+  position: relative;
+  z-index: 1;
+}
+#sub2 .hover-items-box>div a>div h3::after {
+  content: ''; display: block;
+  width: 50px; height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 120px; bottom: -30px;
+  z-index: 1;
+}
+#sub2 .hover-items-box>div a>div p {
+  color: #fff;
+  font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* page-sub-title */
+#sub2 .bottom-text .page-sub-title{
+  margin-right: 130px;
+  display: inline-block;
+}
+#sub2 .bottom-text .page-sub-title h2{
+  font: 700 3em 'Nanum Gothic', sans-serif;
+  float: left;
+}
+
+/* nugu-text */
+#sub2 .bottom-text .nugu-text {
+  width: 850px; height: 500px;
+  border-top: 1px solid #000;
+  float: right;
+}
+#sub2 .bottom-text .nugu-text h3 {
+  padding: 21px 0 42px 0;
+  font: 700 2.4em 'Nanum Gothic', sans-serif;
+  color: #f79024;
+}
+#sub2 .bottom-text .nugu-text p {
+  font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+
+
+
+/* ************ sub3 page area start *********** */
+/* page-title */
+#sub3 .page-title h2 {
+  font: 400 5em 'Nanum Gothic', sans-serif;
+  margin: 42px 0 10px 0;
+}
+#sub3 .page-title p {
+  font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+#sub3 .page-title img {
+  margin-bottom: 84px;
+}
+
+/* process */
+#sub3 .process .process-box {
+  width: 1100px;
+}
+#sub3 .process .process-box>div:first-child{
+  width: 100%;
+  height: 230px;
+}
+#sub3 .process .process-box>div:nth-child(2){
+  width: 100%;
+  height: 420px;
+}
+#sub3 .process .process-box>div:last-child{
+  width: 100%;
+  height: 294px;
+}
+#sub3 .process .process-box>div h2{
+  font: 700 3em 'Nanum Gothic', sans-serif;
+  width: 300px; height: 100%;
+  display: inline-block;
+}
+#sub3 .process .process-box>div>div {
+  width: 800px; height: 100%;
+  float: right;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+}
+#sub3 .process .process-box>div p{
+   font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+}
+#sub3 .process-box .new-employee {
+  background: url(../images/diagram_02.png) no-repeat 75px 0;
+  height: 130px;
+  margin-bottom: 42px;
+}
+#sub3 .process-box .career-employee {
+  background: url(../images/diagram_03.png) no-repeat 0 0;
+  height: 130px;
+  margin-bottom: 42px;
+}
+
+
+/* QnA */
+#sub3 .qna {
+  background-color: #f8f8f8;
+  padding: 63px 0 168px 0;
+}
+#sub3 .qna-box h2 {
+  font: 700 3.2em 'Nanum Gothic', sans-serif;
+  width: 130px; height: 84px;
+  float: left;
+}
+#sub3 .qna-box ul {
+  float: right;
+  width: 880px;
+  border-top: 1px solid #000;
+}
+
+#sub3 .qna-box ul li:nth-child(odd){
+  height: 84px;
+}
+#sub3 .qna-box ul li:nth-child(odd)>a{
+  position: relative;
+  display: block;
+  width: 100%; height: 100%;
+  padding: 30px 30px;
+}
+#sub3 .qna-box ul li:nth-child(odd) .spr_faq{
+  width: 24px; height: 35px;
+  background: url(../images/spr_faq.png) no-repeat 0 0;
+  position: absolute;
+  top: 25px; left: 0px;
+}
+#sub3 .qna-box ul li:nth-child(odd) h3{
+  font: 400 1.2em/21px 'Nanum Gothic', sans-serif;
+}
+#sub3 .qna-box ul li:nth-child(odd) .spr_faq_arrow{
+  background: url(../images/spr_faq_arrow.png) no-repeat 0 -31px;
+  width: 24px; height: 16px;
+  position: absolute;
+  top: 30px; right: 30px;
+}
+/* 토글 클래스 설정하기 */
+.act {
+  background: url(../images/spr_faq_arrow.png) no-repeat 0 0 !important;
+}
+
+#sub3 .qna-box ul li:nth-child(even){
+  background-color: #fff;
+  padding: 40px 80px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  display: none;
+}
+#sub3 .qna-box ul li:nth-child(even) .spr_faq{
+  width: 24px; height: 28px;
+  background: url(../images/spr_faq.png) no-repeat 0 -44px;
+  position: absolute;
+  top: 30px; left: 40px;
+}
+#sub3 .qna-box ul li:nth-child(even) p {
+  font: 400 1em/1.7 'Nanum Gothic', sans-serif;
+}
+
+
+/* ************ sub3 page area start *********** */
+/* page-title */
+#sub4 .page-title h2 {
+  font: 400 5em 'Nanum Gothic', sans-serif;
+  margin: 42px 0;
+}
+
+/* t-academy */
+#sub4 .t-academy .t-academy-box{
+  width: 100%; height: 100%;
+}
+#sub4 .t-academy .t-academy-box>img {
+  margin-bottom: 42px;
+}
+#sub4 .t-academy .t-academy-box{
+  position: relative;
+}
+#sub4 .t-academy .t-academy-text {
+  width: 430px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0; right: 0;
+  padding: 42px 30px;
+}
+#sub4 .t-academy .t-academy-text h3 {
+  font: 400 3em 'Nanum Gothic', sans-serif;
+  color: #fff;
+  margin-bottom: 42px;
+  position: relative;
+}
+#sub4 .t-academy .t-academy-text h3::after {
+  content: ''; display: block;
+  background-color: #fff;
+  width: 30px; height: 2px;
+  position: absolute;
+  left: 0; bottom: -21px;
+}
+#sub4 .t-academy .t-academy-text p {
+  font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
+  color: #fff;
+  margin-bottom: 21px;
+}
+#sub4 .t-academy .t-academy-text a {
+  font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
+  color: #fff;
+  display: block;
+  width: 200px; height: 42px;
+  text-align: center;
+  background-color: #e51837;
+  border-radius: 5px;
+  float: right;
+}
+
+
+/* contents */
+#sub4 .contents .item-box {
+  width: 1170px; height: 294px;
+}
+#sub4 .contents .item-box h2{
+  width: 250px; height: 100%;
+  font: 700 3em 'Nanum Gothic', sans-serif;
+  float: left;
+}
+#sub4 .contents .item-box .item-right-box{
+  width: 850px;
+  float: right;
+  border-top: 1px solid #666;
+  margin-bottom: 63px;
+  padding-top: 21px;
+}
+#sub4 .contents .item-box .item-right-box p{
+  font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#sub4 .contents .item-box .item-right-box h3{
+  font: 700 1.4em/21px 'Nanum Gothic', sans-serif;
+  margin-bottom: 10px;
+}
+#sub4 .contents .item-right-box .img-box {
+  height: 61px;
+  display: flex;
+}
+#sub4 .contents .item-right-box .img-box>div{
+  font: 400 1.4em/61px 'Nanum Gothic', sans-serif;
+  color: #f48024;
+  margin: 0 30px 0 20px;
+}
+#sub4 .contents .item-right-box .img-box>a {
+  display: block;
+  width: 200px; height: 42px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  color: #666;
+  font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
+  padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
