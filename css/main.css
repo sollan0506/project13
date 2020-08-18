@@ -4,7 +4,10 @@
 
 
 /* ******************* 레이아웃 구성시작 ******************** */
-#wrap { width: 100%; height: 100%; margin: auto;}
+#wrap { 
+  width: 100%; height: 100%; 
+  margin: auto;
+}
 
 header { width: 100%; height: 63px; }
 #mainview { width: 100%; height: 1000px; }
@@ -16,10 +19,15 @@ header { width: 100%; height: 63px; }
 #contents #section4 { width: 100%; height: 588px; }
 footer { width: 100%; height: 147px; }
 
-.container { width: 1170px; height: 100%; margin: auto; }
+.container { 
+  width: 1170px; height: 100%; 
+  margin: auto; 
+}
 
-body { overflow-x: hidden; overflow-y: auto; }
-
+body { 
+  overflow-x: hidden; 
+  overflow-y: auto; 
+}
 
 
 
@@ -37,11 +45,7 @@ body { overflow-x: hidden; overflow-y: auto; }
 
 
 
-
-
-
 /* ******************* 개별영역 선언 시작 ******************** */
-
 /* ********* header Area Start *********** */
 header { 
   background-color: #fff; 
@@ -50,24 +54,27 @@ header {
   overflow: hidden;
 }
 header h1 a img { 
-  position: absolute; top: 0; left: 0;
   width: 85px;
-  margin: 10px 0 0 40px;
+  position: absolute; 
+  top: 0; left: 0;
   z-index: 20;
+  margin: 10px 0 0 40px;
 }
 
 /* gnb */
 header nav{ 
   width: 100%; height: 243px; 
-  position: absolute; left: 0; top: 0;
   background-color: #fff;
   box-shadow: 0px 1px 30px 1px #333;
+  position: absolute; 
+  left: 0; top: 0;
 }
 header nav::after{ 
   content: ''; display: block;
   width: 100%; height: 1px;
   background-color: #ccc;
-  position: absolute; left: 0; top: 62px;
+  position: absolute; 
+  left: 0; top: 62px;
 }
 /* 주메뉴 설정 시작 */
 header nav>ul { 
@@ -84,8 +91,7 @@ header nav>ul {
 }
 header nav>ul>li { 
   display: inline-block; 
-  width: 230px;
-  height: auto;
+  width: 230px; height: auto;
   position: relative;
 }
 header nav>ul>li>a {
@@ -104,9 +110,11 @@ header nav>ul>li>a:hover::after {
 
 /* 서브메뉴 설정 시작 */
 header nav ul ul{
-  width: 100%; height: 180px; padding: 10px 0;
-  position: absolute; left: 0; top: 40px;  
+  width: 100%; height: 180px;
   border-left: 1px solid #ccc;
+  position: absolute; 
+  left: 0; top: 40px;  
+  padding: 10px 0;
 }
 header nav>ul>li:last-child>ul{
   border-right: 1px solid #ccc;
@@ -115,7 +123,8 @@ header nav li li{
   width: 100%; height: 35px;
 }
 header nav li li a{
-  display: block; width: 100%; height: 100%;
+  display: block; 
+  width: 100%; height: 100%;
   font: 15px/35px "맑은 고딕", sans-serif;  
 }
 header nav li li a:hover{
@@ -125,7 +134,8 @@ header nav li li a:hover{
 
 /* q-menu */
 header .q-menu { 
-  position: absolute; top: 0; right: 0;
+  position: absolute; 
+  top: 0; right: 0;
 }
 header .q-menu .lang { 
   float: left; 
@@ -205,14 +215,12 @@ header .q-menu .q-info a {
 #main-title h2 {
   font: bold 6em 'Nanum Gothic', sans-serif;
   position: absolute;
-  /* left: 20px;  */
   top: 300px;
 }
 #main-title p {
   font: 400 1.6em/1.5 'Nanum Gothic', sans-serif;
   color: #666;
   position: absolute;
-  /* left: 20px;  */
   top: 400px;
 }
 
@@ -221,8 +229,7 @@ header .q-menu .q-info a {
 /* section1 Area Start */
 #contents #section1 {
   position: relative;
-  right: 2%; 
-  top: 563px;
+  right: 2%; top: 563px;
   z-index: 2;
   margin-top: 63px;
 }
@@ -236,8 +243,7 @@ header .q-menu .q-info a {
 }
 /* sec1-title-box */
 #contents #section1 .sec1-title-box{ 
-  width: 320px; 
-  height: 147px;
+  width: 320px; height: 147px;
 }
 #contents #section1 .sec1-title-box h3{
  font: 400 4.8em 'Nanum Gothic', sans-serif; 
@@ -267,8 +273,8 @@ header .q-menu .q-info a {
 }
 /* 구분선 */
 #contents #section1 .items-box hr{
-  margin: 20px 0;
   border: 1px solid #ccc;
+  margin: 20px 0;
 } 
 /* 각각 4개의 박스 */
 #contents #section1 .items-box>div>div{ 
@@ -308,8 +314,7 @@ header .q-menu .q-info a {
 #contents #section2 {
   background : url(../images/bg_main_section.png) no-repeat 0 0;
   position: relative;
-  left: 0;
-  top: 460px;
+  left: 0; top: 460px;
   z-index: 3;
 }
 #contents #section2>.container>img{
@@ -319,12 +324,10 @@ header .q-menu .q-info a {
 #contents #section2 .section2-wrap-box{
   position: absolute;
   top: 80px;
-  /* left: 2%; */
 }
 /* sec2-title-box */
 #contents #section2 .sec2-title-box{ 
-  width: 570px; 
-  height: 147px;
+  width: 570px; height: 147px;
   margin-top: 80px;
 }
 #contents #section2 .sec2-title-box h3{
@@ -355,8 +358,8 @@ header .q-menu .q-info a {
 }
 /* 구분선 */
 #contents #section2 .items-box hr{
-  margin: 20px 0;
   border: 1px solid #ccc;
+  margin: 20px 0;
 } 
 /* 각각 4개의 박스 */
 #contents #section2 .items-box>div>div{ 
@@ -474,11 +477,11 @@ header .q-menu .q-info a {
 
 /* section3 Area Start */
 #contents #section4 {
+  width: 100%;
   background-color: #000;
   position: relative;
-  z-index: 5;
   top: 0; left: 0;
-  width: 100%;
+  z-index: 5;
 }
 #contents #section4 .sec4-title-box {
   width: 16%; height: 115px;
@@ -491,10 +494,10 @@ header .q-menu .q-info a {
   color: #fff;
  }
  #contents #section4 .sec4-title-box p {
-   font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
-   margin-bottom: 21px;
-   color: #ccc;
-   width: 100%;
+  width: 100%; 
+  font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
+  color: #ccc;
+  margin-bottom: 21px;
  }
  #contents #section4 .sec4-title-box a {
    display: inline-block;
@@ -513,8 +516,7 @@ header .q-menu .q-info a {
    margin-top: 4%;
  }
  #contents #section4 .sec4-item-box>div{
-  width: 30%;
-  height: 294px;
+  width: 30%; height: 294px;
   display: inline-block;
   margin: 0 5px;
 }
@@ -523,13 +525,12 @@ header .q-menu .q-info a {
   margin-bottom: 21px;
 }
 #contents #section4 .sec4-item-box>div>h4{
+  width: 100%; height: 21px;
   font: 400 1.4em 'Nanum Gothic', sans-serif;
   color: #fff;
-  width: 100%; height: 21px;
   overflow: hidden;
   white-space: nowrap;/*줄바꿈 방지. 한줄로 표시*/
   text-overflow: ellipsis; /* 생략기호(...) 표시 */
-  
 }
 #contents #section4 .sec4-item-box>div>span{
   font: 400 1.2em 'Nanum Gothic', sans-serif;
@@ -587,11 +588,9 @@ footer {
   position: relative;
 }
 footer .black_logo {
-  width: 130px;
-  height: 60px;
+  width: 130px; height: 60px;
   position: absolute;
-  top: 42px;
-  left: 50px;
+  top: 42px; left: 50px;
 }
 footer #footer-top {
   position: absolute; left: 50%; top: 42px;
@@ -603,8 +602,8 @@ footer #footer-top {
 }
 footer #footer-top ul li{
   float: left;
-  margin: 0 30px;
   position: relative;
+  margin: 0 30px;
 }
 footer #footer-top ul li::after{
   content: ''; display: block;
@@ -638,13 +637,11 @@ footer #footer-bottom address {
 }
 footer .sk_mservice_logo {
   position: absolute;
-  top: 42px;
-  right: 100px;
+  top: 42px; right: 100px;
 }
 footer .tacademy_logo {
   position: absolute;
-  top: 42px;
-  right: 250px;
+  top: 42px; right: 250px;
 }
 
 

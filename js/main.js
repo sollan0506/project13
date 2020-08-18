@@ -38,19 +38,13 @@ $(function(){
 
  var Timer = setInterval(flipLoop, 4000);
 
-
-
-
+ 
 
   /* ********************* sub2 page ********************** */
   var hover_item = $('#sub2 .hover-items-box>div a');
   var cover = $('#sub2 .hover-items-box>div a>div');
   var hover_items_box = $('#sub2 .hover-items-box');
   var first_item = $('#sub2 .hover-items-box>div:first-child a>div');
-  
-  //  초기상태 설정
-  // var cover_first = $('#sub2 .hover-items-box>div:first-child a>div');
-  // cover_first.css('bottom', 0);
 
   hover_item.hover(
     function(){
@@ -83,8 +77,5 @@ $(function(){
 
   /* ********************* wow.js ********************** */
   new WOW().init();
-
-
-
 
 });

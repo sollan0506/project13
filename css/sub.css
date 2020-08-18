@@ -4,11 +4,21 @@
 
 
 /* ********************** 레이아웃 구성시작 *********************** */
-#wrap { width: 100%; height: 100%; margin: auto;}
+#wrap { 
+  width: 100%; height: 100%; 
+  margin: auto;
+}
 
-header { height: 63px; }
-footer { height: 147px; }
-.container { width: 1170px; height: 100%; margin: auto; }
+header { 
+  height: 63px; 
+}
+footer { 
+  height: 147px; 
+}
+.container { 
+  width: 1170px; height: 100%; 
+  margin: auto; 
+}
 
 
 /* ********************** 공통영역 선언시작 *********************** */
@@ -20,30 +30,32 @@ header {
   overflow: hidden;
 }
 header h1 a img { 
-  position: absolute; top: 0; left: 0;
   width: 85px;
-  margin: 10px 0 0 40px;
+  position: absolute; 
+  top: 0; left: 0;
   z-index: 20;
+  margin: 10px 0 0 40px;
 }
 
 /* gnb */
 header nav{ 
   width: 100%; height: 243px; 
-  position: absolute; left: 0; top: 0;
   background-color: #fff;
   box-shadow: 0px 1px 30px 1px #333;
+  position: absolute; 
+  left: 0; top: 0;
 }
 header nav::after{ 
   content: ''; display: block;
   width: 100%; height: 1px;
   background-color: #ccc;
-  position: absolute; left: 0; top: 62px;
+  position: absolute; 
+  left: 0; top: 62px;
 }
 /* 주메뉴 설정 시작 */
 header nav>ul { 
   width: 950px; height: 63px;
   text-align: center;
-  padding-top: 22px;
 
   position: absolute; left: 50%; top: 0;
   
@@ -51,11 +63,12 @@ header nav>ul {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  
+  padding-top: 22px;
 }
 header nav>ul>li { 
   display: inline-block; 
-  width: 230px;
-  height: auto;
+  width: 230px; height: auto;
   position: relative;
 }
 header nav>ul>li>a {
@@ -85,9 +98,11 @@ header nav>ul>li>a:hover::after {
 
 /* 서브메뉴 설정 시작 */
 header nav ul ul{
-  width: 100%; height: 180px; padding: 10px 0;
-  position: absolute; left: 0; top: 40px;  
+  width: 100%; height: 180px;
   border-left: 1px solid #ccc;
+  position: absolute; 
+  left: 0; top: 40px;  
+  padding: 10px 0;
 }
 header nav>ul>li:last-child>ul{
   border-right: 1px solid #ccc;
@@ -96,7 +111,8 @@ header nav li li{
   width: 100%; height: 35px;
 }
 header nav li li a{
-  display: block; width: 100%; height: 100%;
+  display: block; 
+  width: 100%; height: 100%;
   font: 15px/35px "맑은 고딕", sans-serif;  
 }
 header nav li li a:hover{
@@ -105,16 +121,17 @@ header nav li li a:hover{
 
 /* q-menu */
 header .q-menu { 
-  position: absolute; top: 0; right: 0;
+  position: absolute; 
+  top: 0; right: 0;
 }
 header .q-menu .lang { 
   float: left; 
   margin: 21px 20px 0 20px;
 }
 header .q-menu .lang>div { 
+  position: relative;
   float: left; 
   margin-right: 10px; 
-  position: relative;
 }
 header .q-menu .lang>div:first-child::after {
   content: ''; display: block;
@@ -126,7 +143,9 @@ header .q-menu .lang>div:first-child::after {
 header .q-menu .lang a {
   font: 400 1.4em 'Nanum Gothic', sans-serif;
 }
-header .q-menu .q-info {float: right;}
+header .q-menu .q-info {
+  float: right;
+}
 header .q-menu .q-info>div { 
   float: left; 
   padding: 23px 10px;
@@ -144,14 +163,13 @@ header .q-menu .q-info a {
 /* ************** location-bar Area Start *************** */
 .location-bar {
   height: 42px;
-  /* border-top: 1px solid #ccc; */
   border-bottom: 1px solid #ccc;
 }
 .location-bar li {
   float: left;
-  margin: 10px;
   font: 400 1em 'Nanum Gothic', sans-serif;
   color: #9c9c9c;
+  margin: 10px;
 }
 .location-bar li:last-child {
   color: #000;
@@ -164,11 +182,9 @@ footer {
   border-top: 1px solid #ccc;
 }
 footer .black_logo {
-  width: 130px;
-  height: 60px;
+  width: 130px; height: 60px;
   position: absolute;
-  top: 42px;
-  left: 50px;
+  top: 42px; left: 50px;
 }
 footer #footer-top {
   position: absolute; left: 50%; top: 42px;
@@ -179,9 +195,9 @@ footer #footer-top {
   transform: translate(-50%, 0);
 }
 footer #footer-top ul li{
+  position: relative;
   float: left;
   margin: 0 30px;
-  position: relative;
 }
 footer #footer-top ul li::after{
   content: ''; display: block;
@@ -215,13 +231,11 @@ footer #footer-bottom address {
 }
 footer .sk_mservice_logo {
   position: absolute;
-  top: 42px;
-  right: 100px;
+  top: 42px; right: 100px;
 }
 footer .tacademy_logo {
   position: absolute;
-  top: 42px;
-  right: 250px;
+  top: 42px; right: 250px;
 }
 
 
@@ -248,29 +262,29 @@ footer .tacademy_logo {
   padding: 105px 90px 0 30px;
 }
 #sub1 .msg-summary .text-box p:first-child{
+  position: relative;
   font: 400 3em 'Nanum Gothic', sans-serif;
   margin-bottom: 42px;
-  position: relative;
 }
 #sub1 .msg-summary .text-box p:first-child::before{
   content: ''; display: block;
-  position: absolute;
-  top: -30px; left: 450px;
   width: 66px; height: 56px;
   background: url(../images/bg_dot_left.png) no-repeat 0 0;
+  position: absolute;
+  top: -30px; left: 450px;
 }
 #sub1 .msg-summary .text-box p:nth-child(2){
   font: 700 2.6em 'Nanum Gothic', sans-serif;
-  margin-bottom: 42px;
   color: #f58027;
   position: relative;
+  margin-bottom: 42px;
 }
 #sub1 .msg-summary .text-box p:nth-child(2)::after{
   content: ''; display: block;
-  position: absolute;
-  top: 10px; right: -10px;
   width: 66px; height: 56px;
   background: url(../images/bg_dot_right.png) no-repeat 0 0;
+  position: absolute;
+  top: 10px; right: -10px;
 }
 #sub1 .msg-summary .text-box p:last-child{
   font: 400 1.8em/1.5 'Nanum Gothic', sans-serif;
@@ -300,14 +314,16 @@ footer .tacademy_logo {
 }
 #sub1 .sign-box .sign-box-inner{
   width: 400px; height: 63px;
-  position: absolute; left: 50%; top: 50%;
-  margin-left: -200px; margin-top: -31.5px;
+  position: absolute; 
+  left: 50%; top: 50%;
+  margin-left: -200px; 
+  margin-top: -31.5px;
 }
 #sub1 .sign-box .sign-text {
   width: 200px; height: 63px;
   font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
-  padding: 21px 30px;
   float: left;
+  padding: 21px 30px;
 }
 
 
@@ -334,9 +350,9 @@ footer .tacademy_logo {
 
 /* items-bottom-box */
 #sub2 .items-bottom-box ul {
+  text-align: center;
   position: absolute;
   left: 0; bottom: 0;
-  text-align: center;
 }
 #sub2 .items-bottom-box ul li {
   width: 292px; height: 63px;
@@ -374,12 +390,12 @@ footer .tacademy_logo {
   overflow: hidden;
 }
 #sub2 .hover-items-box>div a>div {
-  position: relative;
-  bottom: -400px;
   width: 100%; height: 100%;
   text-align: center;
-  padding-top: 126px;
   background-color: rgba(200, 37, 61, 0.9);
+  position: relative;
+  bottom: -400px;
+  padding-top: 126px;
 
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -389,15 +405,12 @@ footer .tacademy_logo {
 #sub2 .hover-items-box>div:first-child a>div{
   bottom: 0;
 }
-/* #sub2 .hover-items-box>div a:hover>div {
-  bottom: 0;
-} */
 #sub2 .hover-items-box>div a>div h3{
   color: #fff;
   font: 400 2em 'Nanum Gothic', sans-serif;
-  margin-bottom: 42px;
   position: relative;
   z-index: 1;
+  margin-bottom: 42px;
 }
 #sub2 .hover-items-box>div a>div h3::after {
   content: ''; display: block;
@@ -416,8 +429,8 @@ footer .tacademy_logo {
 
 /* page-sub-title */
 #sub2 .bottom-text .page-sub-title{
-  margin-right: 130px;
   display: inline-block;
+  margin-right: 130px;
 }
 #sub2 .bottom-text .page-sub-title h2{
   font: 700 3em 'Nanum Gothic', sans-serif;
@@ -431,9 +444,9 @@ footer .tacademy_logo {
   float: right;
 }
 #sub2 .bottom-text .nugu-text h3 {
-  padding: 21px 0 42px 0;
   font: 700 2.4em 'Nanum Gothic', sans-serif;
   color: #f79024;
+  padding: 21px 0 42px 0;
 }
 #sub2 .bottom-text .nugu-text p {
   font: 400 1.4em/1.5 'Nanum Gothic', sans-serif;
@@ -461,39 +474,36 @@ footer .tacademy_logo {
   width: 1100px;
 }
 #sub3 .process .process-box>div:first-child{
-  width: 100%;
-  height: 230px;
+  width: 100%; height: 230px;
 }
 #sub3 .process .process-box>div:nth-child(2){
-  width: 100%;
-  height: 420px;
+  width: 100%; height: 420px;
 }
 #sub3 .process .process-box>div:last-child{
-  width: 100%;
-  height: 294px;
+  width: 100%; height: 294px;
 }
 #sub3 .process .process-box>div h2{
-  font: 700 3em 'Nanum Gothic', sans-serif;
-  width: 300px; height: 100%;
   display: inline-block;
+  width: 300px; height: 100%;
+  font: 700 3em 'Nanum Gothic', sans-serif;
 }
 #sub3 .process .process-box>div>div {
   width: 800px; height: 100%;
-  float: right;
   border-top: 1px solid #000;
+  float: right;
   padding-top: 10px;
 }
 #sub3 .process .process-box>div p{
    font: 400 1.4em/21px 'Nanum Gothic', sans-serif;
 }
 #sub3 .process-box .new-employee {
-  background: url(../images/diagram_02.png) no-repeat 75px 0;
   height: 130px;
+  background: url(../images/diagram_02.png) no-repeat 75px 0;
   margin-bottom: 42px;
 }
 #sub3 .process-box .career-employee {
-  background: url(../images/diagram_03.png) no-repeat 0 0;
   height: 130px;
+  background: url(../images/diagram_03.png) no-repeat 0 0;
   margin-bottom: 42px;
 }
 
@@ -504,23 +514,23 @@ footer .tacademy_logo {
   padding: 63px 0 168px 0;
 }
 #sub3 .qna-box h2 {
-  font: 700 3.2em 'Nanum Gothic', sans-serif;
   width: 130px; height: 84px;
+  font: 700 3.2em 'Nanum Gothic', sans-serif;
   float: left;
 }
 #sub3 .qna-box ul {
-  float: right;
   width: 880px;
   border-top: 1px solid #000;
+  float: right;
 }
 
 #sub3 .qna-box ul li:nth-child(odd){
   height: 84px;
 }
 #sub3 .qna-box ul li:nth-child(odd)>a{
-  position: relative;
   display: block;
   width: 100%; height: 100%;
+  position: relative;
   padding: 30px 30px;
 }
 #sub3 .qna-box ul li:nth-child(odd) .spr_faq{
@@ -533,8 +543,8 @@ footer .tacademy_logo {
   font: 400 1.2em/21px 'Nanum Gothic', sans-serif;
 }
 #sub3 .qna-box ul li:nth-child(odd) .spr_faq_arrow{
-  background: url(../images/spr_faq_arrow.png) no-repeat 0 -31px;
   width: 24px; height: 16px;
+  background: url(../images/spr_faq_arrow.png) no-repeat 0 -31px;
   position: absolute;
   top: 30px; right: 30px;
 }
@@ -544,11 +554,11 @@ footer .tacademy_logo {
 }
 
 #sub3 .qna-box ul li:nth-child(even){
+  display: none;
   background-color: #fff;
-  padding: 40px 80px;
   border-bottom: 1px solid #ccc;
   position: relative;
-  display: none;
+  padding: 40px 80px;
 }
 #sub3 .qna-box ul li:nth-child(even) .spr_faq{
   width: 24px; height: 28px;
@@ -579,8 +589,7 @@ footer .tacademy_logo {
   position: relative;
 }
 #sub4 .t-academy .t-academy-text {
-  width: 430px;
-  height: 450px;
+  width: 430px; height: 450px;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0; right: 0;
@@ -589,13 +598,13 @@ footer .tacademy_logo {
 #sub4 .t-academy .t-academy-text h3 {
   font: 400 3em 'Nanum Gothic', sans-serif;
   color: #fff;
-  margin-bottom: 42px;
   position: relative;
+  margin-bottom: 42px;
 }
 #sub4 .t-academy .t-academy-text h3::after {
   content: ''; display: block;
-  background-color: #fff;
   width: 30px; height: 2px;
+  background-color: #fff;
   position: absolute;
   left: 0; bottom: -21px;
 }
@@ -605,10 +614,10 @@ footer .tacademy_logo {
   margin-bottom: 21px;
 }
 #sub4 .t-academy .t-academy-text a {
-  font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
-  color: #fff;
   display: block;
   width: 200px; height: 42px;
+  font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
+  color: #fff;
   text-align: center;
   background-color: #e51837;
   border-radius: 5px;
@@ -627,8 +636,8 @@ footer .tacademy_logo {
 }
 #sub4 .contents .item-box .item-right-box{
   width: 850px;
-  float: right;
   border-top: 1px solid #666;
+  float: right;
   margin-bottom: 63px;
   padding-top: 21px;
 }
@@ -658,12 +667,6 @@ footer .tacademy_logo {
   font: 400 1.4em/42px 'Nanum Gothic', sans-serif;
   padding-left: 15px;
 }
-
-
-
-
-
-
 
 
 
